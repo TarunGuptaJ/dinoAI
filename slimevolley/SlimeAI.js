@@ -537,7 +537,7 @@ var slimeAIs = [
      legacyBallColor:'#ff0',
      newGroundColor:'#ca6',
      backTextColor:'#000',
-     //initAI:setMasterSlime},
+    //  initAI:setMasterSlime},
      initAI:setPatheticWhiteSlime},
     {name:"Angry Red Slime",
      color:'#f00',
