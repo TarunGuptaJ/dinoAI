@@ -3,13 +3,8 @@ let trains = [];
 
 function setup() {
     createCanvas(800, 450);
+    // background(255);
     unicorn = new Unicorn();
-}
-
-function keyPressed(){
-    if (key == ' '){
-        unicorn.jump();
-    }
 }
 
 function draw() {
@@ -19,7 +14,8 @@ function draw() {
     }
 
     
-    background(220);
+    background(0);
+    unicorn.think(trains);
     unicorn.show();
     unicorn.move();
 
@@ -33,3 +29,9 @@ function draw() {
     }
 }
 
+// Commenting out for ga
+// function keyPressed(){
+//     if (key == ' '){
+//         unicorn.jump();
+//     }
+// }
