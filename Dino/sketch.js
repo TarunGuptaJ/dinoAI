@@ -1,10 +1,15 @@
-let unicorn;
+const TOTAL = 350;
+let unicorns = [];
+let savedUnicorns = [];
 let trains = [];
 
 function setup() {
     createCanvas(800, 450);
     // background(255);
-    unicorn = new Unicorn();
+    for(let i = 0;i<TOTAL;++i){
+        unicorns[i] = new Unicorn();
+    }
+    // unicorn = new Unicorn();
 }
 
 function draw() {
@@ -15,17 +20,32 @@ function draw() {
 
     
     background(0);
-    unicorn.think(trains);
-    unicorn.show();
-    unicorn.move();
+    for(let unicorn of unicorns){
+        unicorn.think(trains);
+        unicorn.show();
+        unicorn.move();
+    }
+
+    if(unicorns.length === 0){
+        nextGeneration();
+        trains = [];
+        trains.push(new Train);
+    }
 
     for(let t of trains){
         t.move();
         t.show();
-        if(unicorn.hits(t)){
-            console.log('game over');
-            noLoop();
+
+        for(let j =unicorns.length - 1;j>=0;--j){
+            if(unicorns[j].hits(t)){
+                savedUnicorns.push(unicorns.splice(j,1)[0]);
+            }
         }
+        // if(unicorn.hits(t)){
+        //     console.log('game over');
+        //     noLoop();
+        // }
+        
     }
 }
 
