@@ -15,7 +15,18 @@ function setup() {
 function draw() {
 
     if(random(1) < 0.01){
-        trains.push(new Train());
+        let train_append = new Train();
+        if(trains.length == 0){
+            trains.push(train_append);
+        }
+        else{
+            let d =abs(trains[trains.length-1].x -train_append.x);
+            console.log(d);
+            if(d>150){
+                trains.push(train_append);
+            } 
+            
+        }
     }
 
     
