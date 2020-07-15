@@ -166,11 +166,18 @@ class ActivationFunction {
     }
   
     // Accept an arbitrary function for mutation
-    mutate(func) {
-      this.weights_ih.map(func);
-      this.weights_ho.map(func);
-      this.bias_h.map(func);
-      this.bias_o.map(func);
+    mutate(rate) {
+      function mutate(val){
+        if(Math.random() < rate){
+          return val + randomGaussian(0,0.1);
+        } else {
+          return val;
+        }
+      }
+      this.weights_ih.map(mutate);
+      this.weights_ho.map(mutate);
+      this.bias_h.map(mutate);
+      this.bias_o.map(mutate);
     }
   
   
