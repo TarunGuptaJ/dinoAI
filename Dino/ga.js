@@ -1,6 +1,7 @@
 
 
 function nextGeneration(){
+    console.log("Next Generation");
     calculateFitness();
 
 

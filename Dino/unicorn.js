@@ -58,6 +58,7 @@ class Unicorn{
             inputs[2] = 50/width;
             inputs[3] = 50/height;
         }
+        // inputs[4] = this.vy/25;
         
 
         // let inputs =[1.0,0.5,0.2,0.3];
