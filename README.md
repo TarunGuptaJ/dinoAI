@@ -4,7 +4,7 @@ Neuroevolution Dino Game
 ---
 
 ## Game  
-The tradtional dinosaur game, where you have to jump over the obstacles.
+The traditional dinosaur game, where you have to jump over the obstacles.
 
 ![Game](Image/SS_dino.PNG)  
 
