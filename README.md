@@ -18,6 +18,13 @@ Once the performance meets expectation, press 's' to save the weights of the din
 
 ---
 
+## Demo
+We can see the algorithm in action 
+![Demo](Image/Recording.gif)
+Initially all of them are jumping randomly and after speeding up the process we get a dino that pretty much times the jump perfectly.
+
+---
+
 ## Observations
 * By the 5th generation the dinosaur had figured out from what distance it has to jump to cross the obstacle.
 * By the 11th generation the dinosaur had figured out to jump much earlier to cross multiple obstacle one after the other.
