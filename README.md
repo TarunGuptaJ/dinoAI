@@ -20,7 +20,7 @@ Once the performance meets expectation, press 's' to save the weights of the din
 
 ## Demo
 We can see the algorithm in action 
-![Demo](Image/Recording.gif)
+![Demo](Image/recording.gif)
 Initially all of them are jumping randomly and after speeding up the process we get a dino that pretty much times the jump perfectly.
 
 ---
